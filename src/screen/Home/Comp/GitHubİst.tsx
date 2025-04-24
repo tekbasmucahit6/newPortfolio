@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaStar, FaCode } from 'react-icons/fa';
 
 export default function TopRepos() {

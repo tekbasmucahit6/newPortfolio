@@ -1,4 +1,4 @@
-import React from 'react'
+
 import CodeScreen from './Comp/CodeScreen'
 import Hello from './Comp/Hello'
 import GitHubİst from './Comp/GitHubİst'
