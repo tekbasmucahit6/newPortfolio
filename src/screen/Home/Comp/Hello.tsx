@@ -18,14 +18,14 @@ export default function Hello() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-start items-start gap-6 w-full p-3">
+    <div className="flex flex-col justify-center items-start gap-6 w-full p-3 min-h-[600px]">
       <h1 className="flex items-center text-3xl md:text-5xl font-mono text-white gap-2 fade-in">
         <span className="text-red-500">&lt;</span>
         <span className="text-cyan-400">Hello</span>
         <span className="text-red-500">/&gt;</span>
       </h1>
 
-      <p className="text-sm md:text-base text-gray-100 font-light max-w-md fade-in">
+      <p className="text-sm md:text-base text-gray-100 font-light max-w-md fade-in min-h-16">
         {typing}
       </p>
 
