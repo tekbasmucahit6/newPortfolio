@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 export default function Header() {
   return (
-    <header className="w-full">
+    <header id="header" className="w-full">
       <div className="max-w-[1200px] mx-auto flex justify-between items-end px-6 py-4 rounded-xl">
         <div className="text-xl font-bold text-white tracking-wide flex gap-2 justify-center items-end">
             <img src="./images/coding.png" className='w-10' alt="" />

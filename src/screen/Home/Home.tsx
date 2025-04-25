@@ -4,6 +4,7 @@ import Hello from './Comp/Hello'
 import GitHubİst from './Comp/GitHubİst'
 import Mucahit from './Comp/Mucahit'
 import Contact from './Comp/Contact'
+import UpScroll from './Comp/UpScroll'
 
 export default function Home() {
   return (
@@ -33,6 +34,11 @@ export default function Home() {
             <Contact />
         </div>
   
+        <div className='fixed bottom-5 right-5'>
+            <UpScroll />
+        </div>
+
+
   </div>
   
   )

@@ -22,7 +22,7 @@ export default function Hello() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-start gap-6 w-full p-3 min-h-[400px]">
+    <div id='hello' className="flex flex-col justify-center items-start gap-6 w-full p-3 min-h-[400px]">
       <h1 className="flex items-center text-3xl md:text-5xl font-mono text-white gap-2 fade-in">
         <span className="text-red-500">&lt;</span>
         <span className="text-cyan-400">Hello</span>
@@ -38,9 +38,9 @@ export default function Hello() {
       </p>
 
       <div className='flex justify-start items-center gap-5 w-full'>
-        <a href="https://github.com/tekbasmucahit6" className='rounded-full p-3 bg-white text-black'><FaGithub size={30} /></a>
-        <a href="https://www.linkedin.com/in/mucahit-tekbas/" className='rounded-full p-3 bg-white text-blue-500'><FaLinkedin size={30} /></a>
-        <a href="https://www.instagram.com/mucahitxtekbs/" className='rounded-full p-3 bg-white text-pink-500'><FaInstagram size={30} /></a>
+        <a href="https://github.com/tekbasmucahit6" className='rounded-full p-3 bg-black text-white hover:scale-125 transition-all shadow-lg'><FaGithub size={30} /></a>
+        <a href="https://www.linkedin.com/in/mucahit-tekbas/" className='rounded-full p-3 bg-white text-blue-500 hover:scale-125 transition-all shadow-lg'><FaLinkedin size={30} /></a>
+        <a href="https://www.instagram.com/mucahitxtekbs/" className='rounded-full p-3 bg-indigo-950 text-pink-600 hover:scale-125 transition-all shadow-lg'><FaInstagram size={30} /></a>
       </div>
     </div>
   );
