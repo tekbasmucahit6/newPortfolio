@@ -17,36 +17,49 @@ export default function TopRepos() {
   }, []);
 
   return (
-    <div className="w-full mx-auto bg-white dark:bg-[#0d1117] text-gray-800 dark:text-gray-200 rounded-xl shadow-md p-6 mt-8">
-      <h2 className="text-xl font-semibold border-b border-gray-700 pb-2 mb-4">🚀 Son Çalıştığım Projeler</h2>
-      <div className='flex flex-wrap justify-between items-start gap-3 w-full'>
-      {repos.map(repo => (
-         <a
-         href={repo.html_url}
-         target="_blank"
-         rel="noopener noreferrer"
-         className="text-cyan-400 font-medium text-lg hover:underline p-5 w-3/12 flex flex-col justify-center items-center text-center gap-4"
-       >
-          <div key={repo.id} className="">
-            <img src="./images/coding.png" className='w-40' alt="" />
-            {repo.name}
-          <p className="text-sm text-gray-400">{repo.description || "Açıklama yok"}</p>
-          <div className="flex gap-4 text-sm text-gray-500 mt-2">
-            <div className="flex items-center gap-1">
-              <FaStar /> {repo.stargazers_count}
-            </div>
-            {repo.language && (
-              <div className="flex items-center gap-1">
-                <FaCode /> {repo.language}
+    <section
+      id="projects"
+      className="w-full bg-transparent text-white py-20 px-6"
+    >
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-emerald-400 mb-12">
+          🚀 Son Projelerim
+        </h2>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-16 pt-6">
+          {repos.map((repo) => (
+            <a
+              key={repo.id}
+              href={repo.html_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#111827] border border-[#1f2937] rounded-xl p-6 flex flex-col hover:border-emerald-500 transition duration-300 group shadow-lg hover:shadow-emerald-500/20"
+            >
+              <div className="mb-4">
+                <h3 className="text-xl font-semibold text-emerald-300 group-hover:text-emerald-400 transition">
+                  {repo.name}
+                </h3>
+                <p className="text-sm text-gray-400 mt-2 line-clamp-3">
+                  {repo.description || "Açıklama bulunamadı."}
+                </p>
               </div>
-            )}
-          </div>
+
+              <div className="mt-auto flex justify-between text-sm text-gray-400">
+                <div className="flex items-center gap-1">
+                  <FaStar className="text-yellow-400" />
+                  {repo.stargazers_count}
+                </div>
+                {repo.language && (
+                  <div className="flex items-center gap-1">
+                    <FaCode />
+                    {repo.language}
+                  </div>
+                )}
+              </div>
+            </a>
+          ))}
         </div>
-
-        </a>
-      ))}
-
-</div>
-    </div>
+      </div>
+    </section>
   );
 }

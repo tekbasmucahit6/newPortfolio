@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 
 
 export default function Header() {
@@ -10,9 +11,35 @@ export default function Header() {
         </div>
         <div className="hidden xl:flex lg:flex md:flex">
           <nav className="flex gap-6 text-white font-medium">
-            <a href="#projects" className="hover:text-cyan-300 transition">Projeler</a>
-            <a href="#about" className="hover:text-cyan-300 transition">Hakkımda</a>
-            <a href="#contact" className="hover:text-cyan-300 transition">İletişim</a>
+          <Link
+              to="aboutme"
+              smooth={true}
+              duration={500}
+              offset={-80} // navbar yüksekliği kadar boşluk bırakır
+              className="cursor-pointer text-white"
+            >
+              hakkımda
+          </Link>
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
+              offset={-80} // navbar yüksekliği kadar boşluk bırakır
+              className="cursor-pointer text-white"
+            >
+              projelerim
+            </Link>
+
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              offset={-80} // navbar yüksekliği kadar boşluk bırakır
+              className="cursor-pointer text-white"
+            >
+              İletişim
+            </Link>
+
           </nav>
         </div>
       </div>
