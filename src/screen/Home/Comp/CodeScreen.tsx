@@ -2,7 +2,7 @@
 
 export default function CodeScreen() {
   return (
-    <div className="bg-[#0d1117] text-xs sm:text-sm font-mono rounded-xl overflow-hidden shadow-2xl w-full max-w-2xl">
+    <div className="bg-[#0d1117] text-xs sm:text-sm font-mono rounded-xl overflow-hidden shadow-2xl w-full">
     {/* Sekme Barı */}
     <div className="flex items-center justify-between px-3 sm:px-4 py-2 bg-[#161b22] border-b border-[#30363d]">
       <div className="flex items-center gap-2">
